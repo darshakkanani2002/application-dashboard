@@ -1,6 +1,0 @@
-[[redirects]]
-
-  from = "http://143.244.139.153:5000/"
-  to = "http://143.244.139.153:5000/"
-  status = 200
-  force = true
