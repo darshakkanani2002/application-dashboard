@@ -1,4 +1,5 @@
 [[redirects]]
+
   from = "/api/v1/language/details"
   to = "http://143.244.139.153:4500/api/v1/language/details"
   status = 200
