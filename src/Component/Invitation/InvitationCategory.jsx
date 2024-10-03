@@ -204,31 +204,45 @@ export default function InvitationCategory({ vCatId: _id }) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {Category.map((item, id) => (
-                                        <tr key={item._id}>
-                                            <td>{id + 1}</td>
-                                            <td>
-                                                <img crossOrigin="anonymous" src={`http://143.244.139.153:5000/${item.vIcon}`} alt={item.vName} className='img-fluid category-icon' />
-                                            </td>
-                                            <td>{item.vName}</td>
-                                            <td>
-                                                <input type="color" value={item.vStartColor} className='mx-2 choose-input-color' readOnly />
-                                                <input type="color" value={item.vEndColor} className='mx-2 choose-input-color' readOnly />
-                                            </td>
-                                            <td>
-                                                <button
-                                                    className='btn btn-danger mx-2 px-3'
-                                                    onClick={() => setDeleteCategoryId(item._id)}
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#deleteModal"
-                                                    title='Delete'
-                                                >
-                                                    <i className="fa-solid fa-trash"></i>
-                                                </button>
-                                                <button className='btn btn-success mx-2 px-3' onClick={() => handleUpdate(item)} title='Update'><i className="fa-solid fa-pen-to-square"></i></button>
-                                            </td>
-                                        </tr>
-                                    ))}
+                                    {
+                                        Category.length > 0 ? (
+                                            Category.map((item, id) => (
+                                                <tr key={item._id}>
+                                                    <td>{id + 1}</td>
+                                                    <td>
+                                                        <img crossOrigin="anonymous" src={`http://143.244.139.153:5000/${item.vIcon}`} alt={item.vName} className='img-fluid category-icon' />
+                                                    </td>
+                                                    <td>{item.vName}</td>
+                                                    <td>
+                                                        <input type="color" value={item.vStartColor} className='mx-2 choose-input-color' readOnly />
+                                                        <input type="color" value={item.vEndColor} className='mx-2 choose-input-color' readOnly />
+                                                    </td>
+                                                    <td>
+                                                        <button
+                                                            className='btn btn-danger mx-2 px-3'
+                                                            onClick={() => setDeleteCategoryId(item._id)}
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#deleteModal"
+                                                            title='Delete'
+                                                        >
+                                                            <i className="fa-solid fa-trash"></i>
+                                                        </button>
+                                                        <button className='btn btn-success mx-2 px-3' onClick={() => handleUpdate(item)} title='Update'><i className="fa-solid fa-pen-to-square"></i></button>
+                                                    </td>
+                                                </tr>
+                                            ))
+
+                                        ) : (
+                                            <tr>
+                                                <td colSpan="5" className="text-center">
+                                                    <div className='invitation-data-no-found'>
+                                                        <img src="/images/ic-content.svg" alt="ic-content" className='img-fluid' />
+                                                        <span className='post-dat-no-found-text d-block'>No Data Found !</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        )
+                                    }
                                 </tbody>
                             </table>
                         </div>
