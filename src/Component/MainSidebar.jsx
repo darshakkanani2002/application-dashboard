@@ -27,7 +27,7 @@ export default function MainSidebar() {
                     <ul className="side-menu">
                         <li className={`my-2 ${activeMenu === 'dailyquates' ? 'active' : ''}`}>
                             <Link to="/" className='nav-link active' onClick={() => handleMenuClick('dailyquates')}>
-                                <i class="fa-solid fa-1 sidebar-icon"></i>.
+                                <i className="fa-solid fa-1 sidebar-icon"></i>.
                                 Daily Quates
                             </Link>
                         </li>
@@ -35,7 +35,7 @@ export default function MainSidebar() {
                             <Link to="/invitation" className='nav-link' onClick={() => handleMenuClick('invitation')}>
                                 {/* <i className="fa-solid fa-signs-post me-3 sidebar-icon"></i> */}
                                 {/* <i className="fa-solid fa-layer-group me-3 sidebar-icon"></i> */}
-                                <i class="fa-solid fa-2 sidebar-icon"></i>.
+                                <i className="fa-solid fa-2 sidebar-icon"></i>.
                                 Invitation Post
                             </Link>
                         </li>
