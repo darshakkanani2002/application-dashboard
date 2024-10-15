@@ -18,7 +18,7 @@ export default function DailySidebar() {
     return (
         <div>
             <>
-                <Button variant="primary" onClick={handleShow} className="mb-3 d-md-none sidebar-toggel-button">
+                <Button variant="primary" onClick={handleShow} className="mb-3 d-md-none">
                     <i className="fa-solid fa-bars"></i>
                 </Button>
 
